@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Audio/Sound Data")]
+
 public class SoundData : MonoBehaviour
 {
     public string id;
