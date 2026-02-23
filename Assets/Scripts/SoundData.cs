@@ -2,7 +2,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Audio/Sound Data")]
 
-public class SoundData : MonoBehaviour
+public class SoundData : ScriptableObject
 {
     public string id;
     public AudioClip clip;
