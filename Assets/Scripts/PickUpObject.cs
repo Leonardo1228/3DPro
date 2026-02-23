@@ -18,17 +18,19 @@ public class PickUpObject : MonoBehaviour
                 PickedObject.transform.position = ZonaInteractuable.position;
                 PickedObject.GetComponent<Rigidbody>().useGravity = false;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = true;
-            }else if (PickedObject != null)
+                AudioManager.Instance.Play2D("Grabbed");
+            }
+        }
+        else if (PickedObject != null)
+        {
+            if (Input.GetButtonDown("Fire2"))
             {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    PickedObject = ObjectToPickUp;
-                    PickedObject.GetComponent<LiftObject>().CanLift = true;
-                    PickedObject.transform.SetParent(null);
-                    PickedObject.GetComponent<Rigidbody>().useGravity = true;
-                    PickedObject.GetComponent<Rigidbody>().isKinematic = false;
-                    PickedObject = null;
-                }
+                PickedObject.GetComponent<LiftObject>().CanLift = true;
+                PickedObject.transform.SetParent(null);
+                PickedObject.GetComponent<Rigidbody>().useGravity = true;
+                PickedObject.GetComponent<Rigidbody>().isKinematic = false;
+                PickedObject = null;
+                AudioManager.Instance.Play2D("Throw");
             }
         }
     }
