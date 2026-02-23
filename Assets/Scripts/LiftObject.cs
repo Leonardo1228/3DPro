@@ -11,6 +11,7 @@ public class LiftObject : MonoBehaviour
         if(other.tag == "ZonaInteractuable")
         {
             other.GetComponentInParent<PickUpObject>().ObjectToPickUp = this.gameObject;
+            AudioManager.Instance.Play2D("Detectar");
         }
     }
 
