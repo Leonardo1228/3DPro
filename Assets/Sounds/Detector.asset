@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb57419f2a3bb674d8a9efa5890ce46b, type: 3}
   m_Name: Detector
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
-  id: 
-  clip: {fileID: 0}
-  volume: 1
+  id: Detectar
+  clip: {fileID: 8300000, guid: 1e36a5ddccda5da4eb23719ecc505b73, type: 3}
+  volume: 5
   loop: 0
   spatialBlend: 0
