@@ -10,8 +10,9 @@ public class ActivateSound : MonoBehaviour
         if (other.tag == "Player")
         {
             
-            //AudioManager.Instance.Play3D("Detectar",pos.transform.position);
+            AudioManager.Instance.Play3D("Detectar",pos.transform.position);
             AudioManager.Instance.Play2D("Detectar");
+
         }
     }
 
@@ -19,8 +20,8 @@ public class ActivateSound : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //AudioManager.Instance.Play3D("Detectar", pos.transform.position);
-            AudioManager.Instance.Play2D("Detectar");
+            AudioManager.Instance.Play3D("Detectar", pos.transform.position);
+
         }
     }
 }
